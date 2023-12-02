@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titlle": {
+      "type": "string",
+      "required": true
+    },
+    "descriptionOne": {
+      "type": "text",
+      "required": true
+    },
+    "preview": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "descriptionTwo": {
+      "type": "text",
+      "required": true
+    },
+    "categoryAge": {
+      "type": "string",
+      "required": true
+    },
+    "detailsCategorySmallDescription": {
+      "type": "string",
+      "required": true
+    },
+    "durationLesson": {
+      "type": "string",
+      "required": true
+    },
+    "countLessons": {
+      "type": "string",
+      "required": true
+    },
+    "imageTop": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

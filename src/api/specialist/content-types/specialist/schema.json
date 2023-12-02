@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "specialists",
+  "info": {
+    "singularName": "specialist",
+    "pluralName": "specialists",
+    "displayName": "Specialist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "photoSpecialist": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "education": {
+      "type": "string",
+      "required": true
+    },
+    "age": {
+      "type": "string",
+      "required": true
+    },
+    "experience": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
