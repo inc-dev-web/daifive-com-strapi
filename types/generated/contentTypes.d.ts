@@ -777,6 +777,7 @@ export interface ApiSpecialistSpecialist extends Schema.CollectionType {
     education: Attribute.String & Attribute.Required;
     age: Attribute.String & Attribute.Required;
     experience: Attribute.String & Attribute.Required;
+    certificates: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
