@@ -50,6 +50,13 @@
     "experience": {
       "type": "string",
       "required": true
+    },
+    "certificates": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
