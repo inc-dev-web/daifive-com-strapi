@@ -718,6 +718,37 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   };
 }
 
+export interface ApiHelpCenterDocumentHelpCenterDocument
+  extends Schema.SingleType {
+  collectionName: 'help_center_documents';
+  info: {
+    singularName: 'help-center-document';
+    pluralName: 'help-center-documents';
+    displayName: 'HelpCenterDocument';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    document: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::help-center-document.help-center-document',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::help-center-document.help-center-document',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.CollectionType {
   collectionName: 'services';
   info: {
@@ -814,6 +845,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::article.article': ApiArticleArticle;
+      'api::help-center-document.help-center-document': ApiHelpCenterDocumentHelpCenterDocument;
       'api::service.service': ApiServiceService;
       'api::specialist.specialist': ApiSpecialistSpecialist;
     }
