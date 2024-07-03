@@ -24,6 +24,10 @@
       "type": "text",
       "required": true
     },
+    "topDescription": {
+      "type": "text",
+      "required": true
+    },
     "photoSpecialist": {
       "type": "media",
       "multiple": false,
