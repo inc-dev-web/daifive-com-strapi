@@ -1,0 +1,31 @@
+# fly.toml app configuration file generated for daifive-admin on 2023-12-04T15:15:49+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "daifive-admin"
+primary_region = "waw"
+
+[build]
+
+[env]
+  HOST = "0.0.0.0"
+  PORT = "3000"
+  PUBLIC_URL = "https://daifive-admin.fly.dev"
+
+[[mounts]]
+  source = "adm_data"
+  destination = "/app/public/uploads"
+  auto_extend_size_threshold = 0
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
